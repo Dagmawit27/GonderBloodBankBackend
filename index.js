@@ -8,9 +8,7 @@ const Donor = require('./models/Donor');
 
 require('dotenv').config();
 
-app.use(cors({
-  origin: "https://dagmawit27.github.io"
-}));
+app.use(cors());
 app.use(express.json());
 
 
