@@ -5,6 +5,7 @@ const cors = require('cors')
 const mongoose = require('mongoose');
 const User = require('./models/User');
 const Donor = require('./models/Donor');
+const EmpUser = require('./models/Empuser');
 
 require('dotenv').config();
 
@@ -115,6 +116,11 @@ app.get('/donor/check-username', async (req,res)=>{
     })
   }
     
+})
+
+app.post('/api/login', async (req, res)=>{
+  const {username, password} = req.body;
+   const user = EmpUser.findOne()
 })
 app.listen(port, () => {
   console.log(`backend app listening at http://localhost:${port}`);
